@@ -19,12 +19,12 @@ alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 ## checkout on other machines
 
 ```sh
-git clone --separate-git-dir=$HOME/.dotfiles https://github.com/zie87/dotfiles.git ~
+git clone --separate-git-dir=$HOME/.dotfiles https://github.com/GordonHaak/dotfiles.git ~
 ```
 
 if this doesn't work because some configs already exists
 ```sh
-git clone --separate-git-dir=$HOME/.dotfiles https://github.com/zie87/dotfiles.git tmpdotfiles
+git clone --separate-git-dir=$HOME/.dotfiles https://github.com/GordonHaak/dotfiles.git tmpdotfiles
 rsync --recursive --verbose --exclude '.git' tmpdotfiles/ $HOME/
 rm -r tmpdotfiles
 ```
