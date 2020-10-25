@@ -5,7 +5,7 @@ call which_key#register('-', "g:which_key_map")
 nnoremap <silent> <leader> :silent <c-u> :silent WhichKey '-'<CR>
 vnoremap <silent> <leader> :silent <c-u> :silent WhichKeyVisual '-'<CR>
 
-set timeoutlen=500
+"set timeoutlen=500
 
 highlight default link WhichKey          Operator
 highlight default link WhichKeySeperator DiffAdded

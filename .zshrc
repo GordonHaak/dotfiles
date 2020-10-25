@@ -5,7 +5,7 @@ export ZSH="${HOME}/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="gnzh"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -59,16 +59,16 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker tmux rust)
+plugins=(git docker rust)
 
 source $ZSH/oh-my-zsh.sh
-
+export PATH=$HOME/.local/bin:$PATH
 # skim zsh plugins 
-[[ $- == *i* ]] && source "/usr/share/skim/completion.zsh" 2> /dev/null
-source "/usr/share/skim/key-bindings.zsh"
+# [[ $- == *i* ]] && source "/usr/share/skim/completion.zsh" 2> /dev/null
+# source "/usr/share/skim/key-bindings.zsh"
 
-export SKIM_DEFAULT_COMMAND='fd --type f || git ls-tree -r --name-only HEAD || rg --files || find .'
-
+# export SKIM_DEFAULT_COMMAND='fd --type f || git ls-tree -r --name-only HEAD || rg --files || find .'
+# 
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -86,17 +86,18 @@ export EDITOR='nvim'
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-
-alias vim="nvim"
-alias cat="bat"
-alias ppsspp="PPSSPPQt"
-
-alias ll="exa --long --icons --header --git --git-ignore"
-alias la="exa --all --icons --long --header --git"
-
-alias zshconfig="${EDITOR} ~/.zshrc"
-alias vimconfig="${EDITOR} ~/.config/nvim/init.vim"
-alias tmuxconfig="${EDITOR} ~/.tmux.conf"
-alias whatigot="pacman -Qqe"
-
+alias vi=nvim.appimage
+#alias vim="nvim"
+#alias cat="bat"
+#alias ppsspp="PPSSPPQt"
+#
+#alias ll="exa --long --icons --header --git --git-ignore"
+#alias la="exa --all --icons --long --header --git"
+#
+#alias zshconfig="${EDITOR} ~/.zshrc"
+#alias vimconfig="${EDITOR} ~/.config/nvim/init.vim"
+#alias tmuxconfig="${EDITOR} ~/.tmux.conf"
+#alias whatigot="pacman -Qqe"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
