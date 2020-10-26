@@ -77,7 +77,7 @@ export PATH=$HOME/.local/bin:$PATH
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-export EDITOR='vi'
+export EDITOR='vim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -86,7 +86,7 @@ export EDITOR='vi'
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-alias vi=nvim.appimage
+#alias vi=nvim.appimage
 #alias vim="nvim"
 #alias cat="bat"
 #alias ppsspp="PPSSPPQt"
@@ -99,5 +99,11 @@ alias vi=nvim.appimage
 #alias tmuxconfig="${EDITOR} ~/.tmux.conf"
 #alias whatigot="pacman -Qqe"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+if [ -f ~/.custom_profile ]; then
+    source ~/.custom_profile
+else
+    echo "Put your local platform config in .custom_profile."
+fi
+
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
