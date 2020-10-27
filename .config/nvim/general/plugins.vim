@@ -46,5 +46,5 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " scratchpad
     "Plug 'metakirby5/codi.vim'
     " clang-format
-    Plug 'rhysd/vim-clang-format'
+    "Plug 'rhysd/vim-clang-format'  # replaced by CoC
 call plug#end()

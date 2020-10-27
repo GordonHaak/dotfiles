@@ -3,9 +3,8 @@
         "markdown",
         "yaml",
         "json",
-        "python",
-        "cpp"
+        "python"
     ],
-    "clangd.semanticHighlighting": false,
+    "clangd.semanticHighlighting": true,
     "snippets.userSnippetsDirectory": "~/.config/nvim/snips"
 }
