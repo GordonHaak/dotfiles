@@ -1,9 +1,12 @@
 {
+    "rust.show_warnings": true,
+    "rust.build_on_save": true,
     "coc.preferences.formatOnSaveFiletypes": [
         "markdown",
         "yaml",
         "json",
-        "python"
+        "python",
+        "rust"
     ],
     "clangd.semanticHighlighting": true,
     "snippets.userSnippetsDirectory": "~/.config/nvim/snips"

@@ -17,3 +17,6 @@ nnoremap <S-TAB> :bprevious<CR>
 
 " clean search highlight
 nnoremap <silent> <leader><space> :noh<cr>
+
+autocmd Filetype rust setlocal makeprg=cargo 
+

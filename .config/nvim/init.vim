@@ -7,7 +7,7 @@ source $HOME/.config/nvim/plug-configs/coc.vim
 " source $HOME/.config/nvim/plug-configs/snippets.vim
 " source $HOME/.config/nvim/plug-configs/codi.vim
 source $HOME/.config/nvim/plug-configs/airline.vim
-" source $HOME/.config/nvim/plug-configs/ranger.vim
+source $HOME/.config/nvim/plug-configs/ranger.vim
 source $HOME/.config/nvim/plug-configs/nerdtree.vim
 source $HOME/.config/nvim/plug-configs/fzf.vim
 " source $HOME/.config/nvim/plug-configs/start-screen.vim
