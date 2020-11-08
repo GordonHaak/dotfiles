@@ -51,6 +51,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     "Plug 'mhinz/vim-signify'
     " language support
     Plug 'neoclide/coc.nvim'
+    Plug 'rust-lang/rust.vim'
     "Plug 'honza/vim-snippets'
     " debugger
     Plug 'puremourning/vimspector'
