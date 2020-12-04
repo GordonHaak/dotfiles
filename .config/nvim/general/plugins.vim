@@ -14,7 +14,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'qpkorr/vim-bufkill'
     " ranger
     Plug 'francoiscabrol/ranger.vim'
-    " Plug 'rbgrouleff/bclose.vim'
+    Plug 'rbgrouleff/bclose.vim'
      
     " nerdtree
     Plug 'preservim/nerdtree'
