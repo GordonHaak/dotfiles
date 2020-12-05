@@ -24,7 +24,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     "Plug 'ryanoasis/vim-devicons'
 
     " floaterm
-    "Plug 'voldikss/vim-floaterm'
+    Plug 'voldikss/vim-floaterm'
    
     " async
     Plug 'tpope/vim-dispatch'
