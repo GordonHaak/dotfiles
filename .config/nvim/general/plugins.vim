@@ -44,9 +44,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " comments
     "Plug 'tpope/vim-commentary'
     
-    " git support
-    Plug 'tpope/vim-fugitive'
-    
     " vcs
     "Plug 'mhinz/vim-signify'
     " language support
