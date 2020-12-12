@@ -13,7 +13,7 @@ source $HOME/.config/nvim/plug-configs/fzf.vim
 " source $HOME/.config/nvim/plug-configs/start-screen.vim
 " source $HOME/.config/nvim/plug-configs/commentary.vim
 " source $HOME/.config/nvim/plug-configs/signify.vim
-" source $HOME/.config/nvim/plug-configs/async.vim
+source $HOME/.config/nvim/plug-configs/async.vim
 source $HOME/.config/nvim/plug-configs/floaterm.vim
 " source $HOME/.config/nvim/plug-configs/clang-format.vim
 source $HOME/.config/nvim/plug-configs/vimspector.vim

@@ -5,6 +5,27 @@ let g:asyncrun_bell = 1
 
 let g:asyncrun_rootmarks = ['.svn', '.git', '.root', '_darcs']
 nnoremap <SPACE> :call asyncrun#quickfix_toggle(6)<cr> 
+
+"  ----------------------------------------------------------------------------
+"  run async terminal tasks in floaterm
+"  ----------------------------------------------------------------------------
+function! s:run_floaterm(opts)
+  let curr_bufnr = floaterm#curr()
+  if has_key(a:opts, 'silent') && a:opts.silent == 1
+    FloatermHide!
+  endif
+  let cmd = 'cd ' . shellescape(getcwd())
+  call floaterm#terminal#send(curr_bufnr, [cmd])
+  call floaterm#terminal#send(curr_bufnr, [a:opts.cmd])
+  " Back to the normal mode
+  stopinsert
+endfunction
+
+let g:asyncrun_runner = get(g:, 'asyncrun_runner', {})
+let g:asyncrun_runner.floaterm = function('s:run_floaterm')
+let g:asynctasks_term_pos = 'floaterm'
+
+
 "  ----------------------------------------------------------------------------
 "  FLOATERM INTEGRATION
 "  ----------------------------------------------------------------------------

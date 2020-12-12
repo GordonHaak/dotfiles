@@ -25,11 +25,14 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " floaterm
     Plug 'voldikss/vim-floaterm'
+    Plug 'Yggdroot/LeaderF'
+    Plug 'voldikss/LeaderF-floaterm'
+    Plug 'voldikss/vim-floaterm'
    
     " async
-    Plug 'tpope/vim-dispatch'
-    "Plug 'skywind3000/asynctasks.vim'
-    "Plug 'skywind3000/asyncrun.vim'
+    "Plug 'tpope/vim-dispatch'
+    Plug 'skywind3000/asynctasks.vim'
+    Plug 'skywind3000/asyncrun.vim'
 
     " themes
     Plug 'crusoexia/vim-monokai'
