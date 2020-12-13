@@ -7,6 +7,25 @@ let g:asyncrun_rootmarks = ['.svn', '.git', '.root', '_darcs']
 nnoremap <SPACE> :call asyncrun#quickfix_toggle(6)<cr> 
 
 "  ----------------------------------------------------------------------------
+" set template for async 
+"  ----------------------------------------------------------------------------
+let g:asynctasks_template = {}
+let g:asynctasks_template.cargo = [
+			\ "[project-init]",
+			\ "command=cargo update",
+			\ "cwd=<root>",
+			\ "",
+			\ "[project-build]",
+			\ "command=cargo build",
+			\ "cwd=<root>",
+			\ "errorformat=%. %#--> %f:%l:%c",
+			\ "",
+			\ "[project-run]",
+			\ "command=cargo run",
+			\ "cwd=<root>",
+			\ "output=terminal",
+			\ ]
+"  ----------------------------------------------------------------------------
 "  run async terminal tasks in floaterm
 "  ----------------------------------------------------------------------------
 function! s:run_floaterm(opts)
