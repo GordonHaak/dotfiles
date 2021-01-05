@@ -10,23 +10,23 @@ nnoremap <SPACE> :call asyncrun#quickfix_toggle(6)<cr>
 " set template for async 
 "  ----------------------------------------------------------------------------
 let g:asynctasks_template = {}
-llet g:asynctasks_template.cpp= [
-            \ "[project-build-clean]"
-            \ "command=cmake --build build --target clean -j $(nproc) --"
-            \ "cwd=<root>"
-            \ "errorformat=%f:%l:%m"
-            \ ""
-            \ "[project-build]"
-            \ "command=cmake --build build -j $(nproc) --"
-            \ "cwd=<root>"
-            \ "errorformat=%f:%l:%m"
-            \ ""
-            \ "[project-run]"
-            \ "command=build/$(VIM_PRONAME)"
-            \ "cwd=<root>"
-            \ "output=terminal"	
+let g:asynctasks_template.cpp= [
+            \ "[project-build-clean]",
+            \ "command=cmake --build build --target clean -j $(nproc) --",
+            \ "cwd=<root>",
+            \ "errorformat=%f:%l:%m",
+            \ "",
+            \ "[project-build]",
+            \ "command=cmake --build build -j $(nproc) --",
+            \ "cwd=<root>",
+            \ "errorformat=%f:%l:%m",
+            \ "",
+            \ "[project-run]",
+            \ "command=build/$(VIM_PRONAME)",
+            \ "cwd=<root>",
+            \ "output=terminal"	,
             \ ]
-et g:asynctasks_template.cargo = [
+let g:asynctasks_template.cargo = [
 			\ "[project-init]",
 			\ "command=cargo update",
 			\ "cwd=<root>",
